@@ -28,7 +28,7 @@ export const OpenAIStream = async (
   key: string
 ) => {
   const system = { role: "system", content: systemPrompt };
-  const res = await fetch(`https://api.puzhenyi.net/v1`, {
+  const res = await fetch(`https://api.puzhenyi.net`, {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${key || process.env.OPENAI_API_KEY}`,
